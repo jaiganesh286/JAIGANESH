@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS TASK-6</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+      form {
+        background-color: rgb(235, 232, 232);
+        padding: 40px;
+        margin-left: 30%;
+        width:100%;
+      }
+      
+      </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <form class="needs-validation col-md-5" novalidate>
+       <div class="mb-3">
+         <label for="validationCustomUsername" class="form-label">Name</label>
+         <div class="input-group has-validation">
+           <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+           <div class="invalid-feedback">
+            Name is required
+           </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="validationCustom03" class="form-label">Email</label>
+          <input type="email" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+             Email is required
+            </div>
+           </div>
+           <div class="mb-3">
+            <label for="validationCustom05" class="form-label">Password</label>
+            <input type="password" class="form-control" id="validationCustom04" required>
+            <div class="invalid-feedback">
+               Password is required
+              </div>
+            </div>
+            <div class="mb-3">
+               <label for="" class="form-label">Hobbies</label>
+                <select class="form-select">
+                  <option selected disabled value="">Choose...</option>
+                   <option>Reading</option>
+                    <option>Traveling</option>
+                     <option>Cooking</option>
+                    </select>
+             </div>
+      <div class="mb-3">
+         <button class="btn btn-danger w-100" type="submit">Submit</button>
+      </div>
+  </form>
+</div>
+<script>
+(function () {
+  'use strict'
+   var forms = document.querySelectorAll('.needs-validation')
+   Array.prototype.slice.call(forms)
+   .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+         event.preventDefault()
+         event.stopPropagation()
+         }
+         form.classList.add('was-validated')
+}, false)
+ })
+})()
+</script>
+</body>
+</html>
